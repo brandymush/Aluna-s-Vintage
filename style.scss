@@ -95,7 +95,7 @@ nav.navbar{display: flex;justify-content: space-between;flex-direction:column;pa
         img{height:30px;}
     }
     .heroe-text{position: relative;z-index: 2;
-        h1{font-size:60px;font-family:'bold';color: #fff;letter-spacing:1.2px;padding-bottom:20px;}
+        h1{font-size:60px;font-family:'regular';color: #fff;letter-spacing:1.2px;padding-bottom:20px;}
         a{color:#fff;font-size:20px;font-family:'regular';display:flex;align-items:center;text-decoration:none;transition: all .5s ease;;
             &:hover{color: rgb(245, 245, 220);;}
             img{height:20px;margin-left:12px;}
