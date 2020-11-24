@@ -1,3 +1,7 @@
+$('img.delete').click(function(){
+  $(this).closest(".cart-items").remove();
+  // $('.cart-items').toggleClass('d-none');
+});
 
 $('#navbar-icon').click(function(){
   $('#navbar-icon .icon').toggleClass('change');
@@ -5,7 +9,7 @@ $('#navbar-icon').click(function(){
    
 });
 $(window).scroll(function() {
-  if ($(document).scrollTop() > 400) {
+  if ($(document).scrollTop() > 800) {
   $('#navbar-icon .icon').removeClass('change');
   $('.navbar ul').removeClass('change');
   }
@@ -91,6 +95,4 @@ $(window).scroll(function() {
   }
 
   
-
-
-
+ 
