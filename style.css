@@ -218,13 +218,14 @@ nav.navbar #navbar-icon {
 
 nav.navbar #navbar-icon p {
   font-family: AvenirNext-Regular;
-  font-size: 12px;
+  font-size: 8px;
   color: #000000;
   letter-spacing: 1px;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   line-height: 40px;
+  text-align: center;
 }
 
 nav.navbar #navbar-icon .icon {
@@ -335,7 +336,7 @@ nav.navbar #navbar-icon .icon.change .bar:nth-of-type(3) {
 
 .heroe .heroe-text {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .heroe .heroe-text h1 {
@@ -344,6 +345,7 @@ nav.navbar #navbar-icon .icon.change .bar:nth-of-type(3) {
   color: #fff;
   letter-spacing: 1.2px;
   padding-bottom: 20px;
+  color: rgba(255, 192, 203, 0.925);
 }
 
 .heroe .heroe-text a {
@@ -1013,7 +1015,7 @@ section.items .item p {
   width: 100%;
 }
 
-.pay .form .inputs input {
+.pay .form .inputs input, .pay .form .inputs .dropdown {
   width: 48%;
   margin-bottom: 20px;
   height: 50px;
@@ -1023,6 +1025,37 @@ section.items .item p {
   font-family: 'regular';
   padding: 0 5%;
   font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pay .form .inputs input > a, .pay .form .inputs .dropdown > a {
+  font-family: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+  color: #808080;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pay .form .inputs input ul, .pay .form .inputs .dropdown ul {
+  top: 20px !important;
+}
+
+.pay .form .inputs input ul li a, .pay .form .inputs .dropdown ul li a {
+  color: #808080;
 }
 
 .pay .method {
@@ -1133,6 +1166,7 @@ section.items .item p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 20px;
 }
 
 .pay .shoping a {
@@ -1172,7 +1206,7 @@ section.items .item p {
 }
 
 .cart {
-  margin: 40px 0;
+  margin: 40px 2px;
 }
 
 .cart .top {
@@ -1223,10 +1257,25 @@ section.items .item p {
 .cart .cart-form th, .cart .cart-form tr, .cart .cart-form td, .cart .cart-form tbody {
   border: none;
   vertical-align: bottom;
+  vertical-align: middle;
+  position: relative;
+}
+
+.cart .cart-form td.price img {
+  position: absolute;
+  right: 0;
+}
+
+.cart .cart-form .cart-items {
+  vertical-align: middle;
+}
+
+.cart .cart-form .item-categoris {
+  vertical-align: middle;
 }
 
 .cart .cart-form .product-img img {
-  height: 50px;
+  height: 100px;
 }
 
 .cart .cart-form .product-img p {
@@ -1315,6 +1364,9 @@ section.items .item p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .cart .cart-form .product-img img {
     margin-right: 12px;
@@ -1324,6 +1376,7 @@ section.items .item p {
     font-size: 14px;
     font-family: 'regular';
     padding-top: 10px;
+    white-space: pre-line;
   }
   .cart .cart-form input {
     width: 50px;
@@ -1524,11 +1577,8 @@ section.items .item p {
     font-size: 110px;
   }
   .heroe .heroe-text a {
-    font-size: 25px;
+    font-size: 40px;
     padding-top: 27px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .heroe .heroe-text a img {
     height: 25px;
@@ -1783,8 +1833,21 @@ section.items .item p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .cart .product-img .right p {
+    font-size: 22px;
+  }
+  .cart .product-img .right span {
+    font-size: 15px;
+    color: #808080;
+  }
   .pay {
     padding: 50px 5%;
+  }
+  .pay .abt-pay {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .pay .form .submit {
     display: -webkit-box;
@@ -1800,6 +1863,10 @@ section.items .item p {
   .pay .form .inputs input {
     font-size: 20px;
   }
+  .pay .form .inputs input > a, .pay .form .inputs input .dropdown {
+    color: #808080;
+    font-size: 20px;
+  }
   .pay .cart-inner {
     margin: 50px 0;
   }
@@ -1810,6 +1877,12 @@ section.items .item p {
   }
   .pay .shoping .btns a:first-of-type {
     margin-right: 12px;
+  }
+  .shoping-continue a:nth-of-type(1) {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    font-size: 22px;
   }
 }
 
@@ -2001,18 +2074,37 @@ section.items .item p {
   .pay .form .submit a {
     margin-right: 15px;
   }
-  .pay .form .inputs input {
+  .pay .form .inputs input, .pay .form .inputs .dropdown {
+    font-size: 18px;
+  }
+  .pay .form .inputs input > a, .pay .form .inputs .dropdown > a {
+    color: #808080;
     font-size: 18px;
   }
   .pay .method {
     padding: 0 5%;
   }
+  .pay .method a {
+    width: 49%;
+  }
   .pay .cart-inner {
     margin: 0px 0;
-    padding: 0 0 0 5%;
+    padding: 0 5% 0 5%;
   }
   .pay .cart-inner .item {
     margin-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pay .cart-inner .item img {
+    height: 153px;
+  }
+  .pay .shoping {
+    margin-top: 30px;
   }
   .pay .shoping .btns {
     display: -webkit-box;
@@ -2035,9 +2127,6 @@ section.items .item p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2047,11 +2136,12 @@ section.items .item p {
     margin-bottom: 10px;
   }
   .shoping-continue a img {
-    margin-right: 4px;
+    margin-right: 10px;
+    height: 30px;
   }
   .shoping-continue a p {
     height: auto;
-    font-size: 12px;
+    font-size: 22px;
   }
   .shoping-continue a:last-of-type {
     background-color: #000;
