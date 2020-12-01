@@ -15,6 +15,14 @@ $(window).scroll(function() {
   }
  });
  
+ $('.btn-plus, .btn-minus').on('click', function(e) {
+   e.preventDefault();
+  const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
+  const input = $(e.target).closest('.input-group').find('input');
+  if (input.is('input')) {
+    input[0][isNegative ? 'stepDown' : 'stepUp']()
+  }
+})
 
  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (t) {
   if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {

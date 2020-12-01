@@ -24,10 +24,6 @@ time, mark, audio, video {
   text-decoration: none;
 }
 
-main {
-  overflow: hidden;
-}
-
 html {
   overflow-x: hidden;
 }
@@ -40,7 +36,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  overflow-x: hidden;
 }
 
 ol, ul {
@@ -64,6 +59,21 @@ a:hover {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.inline-group {
+  max-width: 9rem;
+  padding: .5rem;
+}
+
+.inline-group .form-control {
+  text-align: right;
+}
+
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 nav.navbar {
@@ -364,7 +374,9 @@ nav.navbar #navbar-icon .icon.change .bar:nth-of-type(3) {
 }
 
 .heroe .heroe-text a:hover {
-  color: beige;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  color: pink;
 }
 
 .heroe .heroe-text a img {
@@ -774,6 +786,13 @@ footer .flower {
 section.items .item {
   text-align: center;
   padding-bottom: 40px;
+  position: relative;
+}
+
+section.items .item a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 section.items .item h2 {
@@ -895,6 +914,8 @@ section.items .item p {
   font-size: 22px;
   font-family: 'regular';
   text-transform: uppercase;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .gallery-tab .tab-inner button:hover {
@@ -990,12 +1011,25 @@ section.items .item p {
           justify-content: center;
   font-family: 'regular';
   text-decoration: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.pay .form .submit a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 
 .pay .form .submit a:nth-of-type(2) {
   background-color: transparent;
   border: 1px solid #D8D8D8;
   color: #000;
+}
+
+.pay .form .submit a:nth-of-type(2):hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .pay .form .inputs {
@@ -1091,6 +1125,13 @@ section.items .item p {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.pay .method a:hover {
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
 }
 
 .pay .cart-inner {
@@ -1197,16 +1238,28 @@ section.items .item p {
   padding: 0 5%;
   margin-bottom: 8px;
   text-decoration: none;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.pay .shoping .btns a:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .pay .shoping .btns a:nth-of-type(2) {
   background-color: #000;
   color: #fff;
-  border: none;
+  border: 2px solid #000;
+}
+
+.pay .shoping .btns a:nth-of-type(2):hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .cart {
-  margin: 40px 2px;
+  margin: 40px 10px;
 }
 
 .cart .top {
@@ -1290,6 +1343,23 @@ section.items .item p {
 
 .cart .cart-form input {
   width: 50px;
+  text-align: center;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+}
+
+.cart .cart-form button {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  margin: 0 5px;
+}
+
+.cart .cart-form button i {
+  color: #808080;
 }
 
 .shoping-continue {
@@ -1320,6 +1390,13 @@ section.items .item p {
   height: 48px;
   margin-bottom: 10px;
   text-decoration: none;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+.shoping-continue a:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .shoping-continue a img {
@@ -1334,6 +1411,11 @@ section.items .item p {
 .shoping-continue a:last-of-type {
   background-color: #000;
   color: #fff;
+}
+
+.shoping-continue a:last-of-type:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .shoping-continue input {
@@ -1416,7 +1498,7 @@ section.items .item p {
     padding-bottom: 0;
   }
   nav.navbar #navbar-icon p {
-    font-size: 18px;
+    font-size: 12px;
   }
   .shop-heroe h1 {
     font-size: 25px;
@@ -1893,9 +1975,15 @@ section.items .item p {
   }
   nav.navbar ul {
     right: -50%;
-    width: 50%;
+    width: 40%;
     left: unset;
-    padding-top: 150px;
+    padding: 50px;
+  }
+  nav.navbar ul .nav-text p {
+    font-size: 18px;
+  }
+  nav.navbar ul .nav-text img.flo {
+    height: 114px;
   }
   section.about {
     margin: 100px 0;
