@@ -62,7 +62,7 @@ table {
 }
 
 .inline-group {
-  max-width: 9rem;
+  max-width: 100%;
   padding: .5rem;
 }
 
