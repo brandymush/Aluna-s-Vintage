@@ -104,7 +104,7 @@ nav.navbar p {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  line-height: 45px;
+  line-height: 1.4;
 }
 
 nav.navbar ul {
@@ -1259,7 +1259,7 @@ section.items .item p {
 }
 
 .cart {
-  margin: 40px 10px;
+  margin: 40px 0px;
 }
 
 .cart .top {
@@ -1314,9 +1314,12 @@ section.items .item p {
   position: relative;
 }
 
+.cart .cart-form td.price {
+  text-align: center;
+}
+
 .cart .cart-form td.price img {
-  position: absolute;
-  right: 0;
+  margin-top: 10px;
 }
 
 .cart .cart-form .cart-items {
@@ -1356,10 +1359,20 @@ section.items .item p {
   outline: none;
   background-color: #fff;
   margin: 0 5px;
+  margin: auto;
 }
 
 .cart .cart-form button i {
   color: #808080;
+}
+
+.cart .input-group {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .shoping-continue {
@@ -1442,6 +1455,14 @@ section.items .item p {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 568px) {
+  .cart {
+    margin: 40px 10px;
+  }
+  .cart td.price img {
+    position: absolute;
+    right: 0;
+    margin-top: 2px !important;
+  }
   .cart .cart-form .product-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1462,6 +1483,12 @@ section.items .item p {
   }
   .cart .cart-form input {
     width: 50px;
+  }
+  .cart .cart-form .input-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .pay .form .submit {
     display: -webkit-box;
@@ -1549,7 +1576,7 @@ section.items .item p {
             align-items: center;
     background-color: #fff;
     z-index: 5;
-    padding: 100px;
+    padding: 40px;
   }
   nav.navbar ul li {
     margin-bottom: 40px;
@@ -1575,15 +1602,15 @@ section.items .item p {
             align-items: center;
   }
   nav.navbar ul .nav-text img {
-    height: 260px;
+    height: 73px;
   }
   nav.navbar ul .nav-text p {
     -webkit-box-ordinal-group: inherit;
         -ms-flex-order: inherit;
             order: inherit;
     white-space: normal;
-    font-size: 22px;
-    margin: 50px 0;
+    font-size: 16px;
+    margin: 20px 0;
     width: auto;
   }
   nav.navbar ul .nav-text .bottom {
@@ -1599,7 +1626,7 @@ section.items .item p {
     width: 100%;
   }
   nav.navbar ul .nav-text .bottom h4 {
-    font-size: 30px;
+    font-size: 18px;
     font-family: 'regular';
     white-space: pre-line;
   }
@@ -2225,7 +2252,7 @@ section.items .item p {
   }
   .shoping-continue a img {
     margin-right: 10px;
-    height: 30px;
+    height: 20px;
   }
   .shoping-continue a p {
     height: auto;
